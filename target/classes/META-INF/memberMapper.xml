@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  
+<mapper namespace="com.spring.mapper.MemberMapper">
+	
+	<!-- 게시글 보기 -->
+	<select id="list_all">
+		select * from member order by member_no desc
+	</select>
+
+
+	<insert id="insert">
+		insert into member(member_no, member_phone, member_address, member_age, member_gender)
+		values (#{member_no}, #{member_phone}, #{member_address}, #{member_age}, #{member_gender})
+	</insert>
+</mapper>
